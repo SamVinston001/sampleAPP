@@ -1,0 +1,27 @@
+const search = async (data1) => {
+
+    let fullList = data1;
+    let searchWord = searchWord1;
+
+    if (searchWord.length == 0) {
+        setFiliteredData(fullList)
+        setLoading(false)
+    }
+    else if (searchWord != undefined) {
+        let searchWordLow = searchWord.toLowerCase()
+        // let fullList = data;
+        let filteredData = fullList.filter((item) => {
+            // console.log("item item", item)
+            return item.blog.toLowerCase().match(searchWordLow)
+        })
+        if (!searchWordLow || searchWordLow === '') {
+            setFiliteredData(fullList)
+        } else if (!Array.isArray(filteredData) && !filteredData.length) {
+            // set no data flag to true so as to render flatlist conditionally
+            setFiliteredData(fullList)
+        } else if (Array.isArray(filteredData)) {
+            setFiliteredData(filteredData)
+        }
+        setLoading(false)
+    }
+}
