@@ -1,1 +1,5 @@
-../../../../../node_modules/react-native-reanimated/ios/RNGestureHandlerStateManager.h
+@protocol RNGestureHandlerStateManager
+
+- (void)setGestureState:(int)state forHandler:(int)handlerTag;
+
+@end

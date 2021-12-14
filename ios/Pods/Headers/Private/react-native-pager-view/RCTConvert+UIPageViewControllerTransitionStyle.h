@@ -1,1 +1,10 @@
-../../../../../node_modules/react-native-pager-view/ios/RCTConvert+UIPageViewControllerTransitionStyle.h
+
+#import <React/RCTConvert.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface RCTConvert (UIPageViewControllerTransitionStyle)
+
+@end
+
+NS_ASSUME_NONNULL_END
